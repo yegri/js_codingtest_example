@@ -2,18 +2,12 @@
 
 // 크리스마스 트리 만들기
 
-const n = 5;
-let tree = '';
-
-for(i=1; i<= n; i ++){
-    let star = '';
-    for(let j = 1; j <= n-i; j ++){
-        star += ' ';
+for(let i=0; i < 5; i++){
+    for(let j=4 ; j > i; j--){
+        document.write('&bsp');
     }
-    for(let j = 1; j<=2*i-1 ; j ++){
-        star += '*';
+    for(let j=0 ; 0 <= 2*i - 1; j++){
+        document.write('*');
     }
-    tree += star + '\n';
+    document.write('<br>');
 }
-
-console.log(tree);
